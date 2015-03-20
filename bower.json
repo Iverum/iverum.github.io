@@ -15,6 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.3"
+    "polymer": "Polymer/polymer#~0.5.5",
+    "normalize.css": "~3.0.2",
+    "core-header-panel": "Polymer/core-header-panel#~0.5.5",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.5"
   }
 }

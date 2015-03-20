@@ -3,46 +3,43 @@
 
 <head>
     <title>iverum</title>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <style>
-        header {
-            position: fixed;
-            width: 100%;
-            text-align: center;
-            font-size: 72px;
-            line-height: 108px;
-            height: 108px;
-            background: #335C7D;
-            color: #fff;
-            font-family: 'PT Sans', sans-serif;
-            transition: all 0.4s ease;
-        }
-
-        header.sticky {
-            font-size: 24px;
-            line-height: 48px;
-            height: 48px;
-            background: #efc47D;
-            text-align: left;
-            padding-left: 20px;
-        }
-    </style>
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="components/content-card.html">
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body unresolved fullbleed vertical layout>
 
-<header><h1>iverum</h1></header>
-<img src="img/achievements.png"/>
+<core-header-panel>
+    <core-toolbar>
+        <h1>iverum</h1>
+    </core-toolbar>
 
-<script>
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
-            $('header').addClass("sticky");
-        } else {
-            $('header').removeClass("sticky");
-        }
-    })
-</script>
+    <section id="profile" layout vertical center>
+        <content-card>
+            <h2>Blake Hair</h2>
+
+            <p flex style="padding-right: 20px">I'm a software engineer. Please hire me!</p>
+
+            <div layout vertical center style="margin: 0 10px">
+                <ul>
+                    <li><a href="http://www.twitter.com/iverum"><img src="img/twitter_logo_blue.png">Twitter</a></li>
+                    <li><a href="http://www.github.com/iverum"><img src="img/github-mark.png">GitHub</a></li>
+                </ul>
+            </div>
+        </content-card>
+    </section>
+
+    <section id="projects" layout vertical center>
+
+    </section>
+
+</core-header-panel>
 
 </body>
 
