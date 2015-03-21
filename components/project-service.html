@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="project-service" attributes="projects">
+    <template>
+        <style>
+            :host {
+                display: none;
+            }
+        </style>
+        <core-ajax id="ajax"
+                   auto
+                   url="../data/projects.json"
+                   on-core-response="{{projectsLoaded}}"
+                   handleAs="json"></core-ajax>
+    </template>
+    <script>
+        Polymer('project-service', {
+            created: function () {
+                this.projects = [];
+            },
+            projectsLoaded: function () {
+                this.projects = this.$.ajax.response.slice(0);
+            }
+        })
+    </script>
+</polymer-element>

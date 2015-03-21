@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="project-service.html">
+<link rel="import" href="project-card.html">
+
+<polymer-element name="project-list">
+    <template>
+        <style>
+            :host {
+                display: block;
+                width: 100%;
+            }
+
+            project-card {
+                float: left;
+                height: 200px;
+                margin: 30px;
+            }
+        </style>
+
+        <project-service id="service" projects="{{projects}}"></project-service>
+
+
+        <div flex>
+            <template repeat="{{project in projects}}">
+                <project-card>
+                    <img src="{{project.icon}}" height="70" width="70">
+
+                    <h2>{{project.name}}</h2>
+
+                    <p>{{project.blurb}}</p>
+                </project-card>
+            </template>
+        </div>
+
+    </template>
+    <script>
+        Polymer({});
+    </script>
+</polymer-element>
