@@ -27,7 +27,15 @@
 
                     <h2>{{project.name}}</h2>
 
-                    <p>{{project.blurb}}</p>
+                    <div>
+                        <p>{{project.blurb}}</p>
+
+                        <div class="project-links" layout horizontal reverse>
+                            <template repeat="{{link in project.links}}" if="{{project.links.length > 0}}">
+                                <a style="margin:0 10px; text-decoration: none;" href="{{link.href}}">{{link.text}}</a>
+                            </template>
+                        </div>
+                    </div>
                 </project-card>
             </template>
         </div>
