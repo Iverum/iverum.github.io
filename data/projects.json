@@ -7,14 +7,38 @@
   },
   {
     "uid": 2,
-    "name": "CA Scene Tool",
+    "name": "CA Scripting Tool",
     "blurb": "Scripting/content pipeline tools for game development.",
-    "icon": "../img/achievements.png"
+    "icon": "../img/ca_game.gif"
+  },
+  {
+    "uid": 4,
+    "name": "BSU Map App",
+    "blurb": "Mobile app to guide students and visitors on Ball State's campus.",
+    "icon": "../img/map-app.png"
   },
   {
     "uid": 3,
     "name": "BSU Rec App",
-    "blurb": "Usage statistics for BSU Recreation.",
-    "icon": "../img/achievements.png"
+    "blurb": "Usage statistics for BSU recreation facilities.",
+    "icon": "../img/rec-icon.png"
+  },
+  {
+    "uid": 5,
+    "name": "Circuit Soaker",
+    "blurb": "Competitive multiplayer game for Ball State University's touch board and iOS.",
+    "icon": "../img/circuit-soaker.png"
+  },
+  {
+    "uid": 6,
+    "name": "Project Devourer",
+    "blurb": "On-set rough cuts using footage imported to an iPad.",
+    "icon": "../img/devourer_icon.png"
+  },
+  {
+    "uid": 7,
+    "name": "Exceptional Me",
+    "blurb": "Time management calendar app for twice-exceptional primary school students on iPad",
+    "icon": "../img/excptme_icon.png"
   }
 ]
