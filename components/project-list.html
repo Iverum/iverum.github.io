@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="project-service.html">
 <link rel="import" href="project-card.html">
+<link rel="import" href="project-overlay.html">
 
 <polymer-element name="project-list">
     <template>
@@ -20,9 +21,9 @@
         <project-service id="service" projects="{{projects}}"></project-service>
 
 
-        <div flex>
+        <div id="projectList" flex>
             <template repeat="{{project in projects}}">
-                <project-card>
+                <project-card on-tap="{{showOverlay}}" project-id="{{project.uid}}">
                     <img src="{{project.icon}}" height="70" width="70">
 
                     <h2>{{project.name}}</h2>
@@ -37,11 +38,19 @@
                         </div>
                     </div>
                 </project-card>
+                <project-overlay backdrop layered id="project-{{project.uid}}">
+                    <h2>{{project.name}}</h2>
+                </project-overlay>
             </template>
         </div>
 
     </template>
     <script>
-        Polymer({});
+        Polymer({
+            showOverlay: function (e) {
+                var selector = '#project-' + e.target.getAttribute('project-id');
+                this.$.projectList.querySelector(selector).toggle();
+            }
+        });
     </script>
 </polymer-element>
