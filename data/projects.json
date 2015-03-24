@@ -3,7 +3,25 @@
     "uid": 1,
     "name": "BSU Achievements",
     "blurb": "The gamification of education at Ball State University.",
+    "description": "Ball State Achievements allows Ball State students to complete Achievements and recieve rewards by participating in the college experience. Students may choose from several categories such as Athletics, Academics, Culture, Exploration, and more to find Achievements they are interested in completing. Upon completion, they will be rewarded with Experience and Bennies that they can spend in the Store to purchase real merchandise from the BSU Bookstore.",
     "icon": "../img/achievements.png",
+    "bullets": [
+      "Mira Award Finalist",
+      "Led team of 4 students to release of Android application to 1200 Ball State incoming freshmen that later grew to include 3000 underclassmen at Ball State University.",
+      "Developed data abstraction layer linking Android Achievements client and Achievements API, including caching of up to 4000 records."
+    ],
+    "images": [
+      "../img/achievements/screenshot_achievements1.png",
+      "../img/achievements/screenshot_achievements2.png",
+      "../img/achievements/screenshot_achievements3.png",
+      "../img/achievements/screenshot_achievements4.png"
+    ],
+    "technologies": [
+      "Android",
+      "iOS",
+      "PHP",
+      "Git"
+    ],
     "links": [
       {
         "text": "App Store",
@@ -17,15 +35,36 @@
   },
   {
     "uid": 2,
-    "name": "CA Scripting Tool",
-    "blurb": "Scripting/content pipeline tools for game development.",
-    "icon": "../img/ca_game.gif"
+    "name": "Content Pipeline Tooling",
+    "blurb": "Scripting/content pipeline tools for in-house game engine.",
+    "description": "A tooling system for an in-house game engine at the Digital Corps. Used a web-based front-end to allow designers and writers to input scripts and assets. An API allowed the scripts and assets to be exported into formats the game engine could read. I implemented a set of bash scripts that would poll the API daily and build the new assets into the project, committing the build if it succeeded. Additional scripts would allow developers more control over the importation of assets.",
+    "icon": "../img/ca_game.gif",
+    "bullets": [
+      "Handled assets for a 6-hours of gameplay",
+      "Automated import of assets into game engine"
+    ],
+    "technologies": [
+      "PHP",
+      "Bash",
+      "Git"
+    ]
   },
   {
     "uid": 4,
     "name": "BSU Map App",
     "blurb": "Mobile app to guide students and visitors on Ball State's campus.",
+    "description": "Explore every corner of Ball State University in Muncie, Indiana, and navigate the college experience from the palm of your hand. BSU's Campus Map is exactly what every student needs to manage time wisely. That means no more getting lost, missing meetings, or last minute struggles to park your car. And it's not just about getting from place to place; you can find hotspots, search for buildings, departments and more.",
     "icon": "../img/map-app.png",
+    "bullets": [
+      "Led team to update Android and iOS versions",
+      "Maintained application over 2 years of use, including through major OS updates",
+      "Silver w3 Award Winner"
+    ],
+    "technologies": [
+      "iOS",
+      "Android",
+      "Google Maps"
+    ],
     "links": [
       {
         "text": "App Store",

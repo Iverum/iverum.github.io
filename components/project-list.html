@@ -13,8 +13,8 @@
 
             project-card {
                 float: left;
-                height: 200px;
-                margin: 30px;
+                height: 250px;
+                margin: 10px 30px 10px 30px;
             }
         </style>
 
@@ -38,9 +38,7 @@
                         </div>
                     </div>
                 </project-card>
-                <project-overlay backdrop layered id="project-{{project.uid}}">
-                    <h2>{{project.name}}</h2>
-                </project-overlay>
+                <project-overlay backdrop layered id="project-{{project.uid}}" project="{{project}}"></project-overlay>
             </template>
         </div>
 
