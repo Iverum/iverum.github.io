@@ -58,7 +58,6 @@
         Polymer({
             showOverlay: function (e) {
                 var selector = '#project-' + e.target.getAttribute('project-id');
-                console.log(selector);
                 this.$.projectList.querySelector(selector).toggle();
             }
         });
