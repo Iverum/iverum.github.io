@@ -33,7 +33,18 @@
 
                         <div class="project-links" layout horizontal reverse>
                             <template repeat="{{link in project.links}}" if="{{project.links.length > 0}}">
-                                <a style="margin:0 10px; text-decoration: none;" href="{{link.href}}">{{link.text}}</a>
+                                <template if="{{link.android}}">
+                                    <a style="margin:0 10px; text-decoration: none;" href="{{link.href}}">
+                                        <img alt="Android app on Google Play"
+                                             src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png"/>
+                                    </a>
+                                </template>
+                                <template if="{{link.apple}}">
+                                    <a style="margin:0 10px; text-decoration: none;" href="{{link.href}}">
+                                        <img alt="iOS app on the App Store" height="45px"
+                                             src="../img/app_store_badge135x40.svg"/>
+                                    </a>
+                                </template>
                             </template>
                         </div>
                     </div>

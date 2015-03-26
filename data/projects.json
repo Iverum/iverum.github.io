@@ -24,10 +24,12 @@
     ],
     "links": [
       {
+        "apple": true,
         "text": "App Store",
         "href": "https://itunes.apple.com/us/app/ball-state-achievements/id901996872?mt=8"
       },
       {
+        "android": true,
         "text": "Play Store",
         "href": "https://play.google.com/store/apps/details?id=com.frogbabyapps.achievements"
       }
@@ -67,10 +69,12 @@
     ],
     "links": [
       {
+        "apple": true,
         "text": "App Store",
         "href": "https://itunes.apple.com/us/app/ball-state-university-campus/id353148218?mt=8"
       },
       {
+        "android": true,
         "text": "Play Store",
         "href": "https://play.google.com/store/apps/details?id=edu.bsu.campusmap"
       }
@@ -83,10 +87,12 @@
     "icon": "../img/rec-icon.png",
     "links": [
       {
+        "apple": true,
         "text": "App Store",
         "href": "https://itunes.apple.com/us/app/bsu-recreation-services/id498386770?mt=8"
       },
       {
+        "android": true,
         "text": "Play Store",
         "href": "https://play.google.com/store/apps/details?id=air.edu.bsu.rec"
       }
