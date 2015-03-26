@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/core-overlay/core-overlay.html">
+<link rel="import" href="../bower_components/polymer-slideshow/polymer-slideshow.html">
 
 <polymer-element name="project-overlay" attributes="opened project">
     <template>
@@ -37,11 +38,13 @@
 
         <div layout horizontal>
 
-            <div class="project-image" auto="true">
-                <template repeat="{{image in project.images}}">
-                    <img src="{{image}}"/>
-                </template>
-            </div>
+            <template if="{{project.images.length > 0}}">
+                <polymer-slideshow width="248" height="500">
+                    <template repeat="{{image in project.images}}">
+                        <img src="{{image}}"/>
+                    </template>
+                </polymer-slideshow>
+            </template>
             <div class="project-description" flex>
                 <p>{{project.description}}</p>
 
