@@ -47,6 +47,7 @@
     ],
     "technologies": [
       "PHP",
+      "JSON Schema",
       "Bash",
       "Git"
     ]
@@ -84,7 +85,17 @@
     "uid": 3,
     "name": "BSU Rec App",
     "blurb": "Usage statistics for BSU recreation facilities.",
+    "description": "The Ball State University Recreation Services App helps students, faculty, staff, alumni and guests identify if their favorite recreation facilities are busy. Updated in real time, there's no need to waste time heading to the gym only to find it too crowded. The Rec app helps you easily identify how busy all areas of the Student Recreation & Wellness Center, Ball Gymnasium, and Lewellen Pool are. Go when you feel comfortable, knowing you will get the most out of your workout. Users can subscribe to recreation areas and/or activities and be notified of a special event, closure or other notices that need to be announced through a text message",
     "icon": "../img/rec-icon.png",
+    "bullets": [
+      "Built front-end administrative tools to track usage of Ball State's recreation facilities",
+      "Designed API to provide information to mobile clients"
+    ],
+    "technologies": [
+      "PHP",
+      "Java",
+      "SQL"
+    ],
     "links": [
       {
         "apple": true,
@@ -102,12 +113,34 @@
     "uid": 5,
     "name": "Circuit Soaker",
     "blurb": "Competitive multiplayer game for Ball State University's touch board and iOS.",
-    "icon": "../img/circuit-soaker.png"
+    "description": "Using the large multi-user touch board outside of the Digital Corps office as a host, we built a multiplayer line defense game. The defending player begins a game on the touch board defending their base from computer controlled robots attempting to destroy the power station. Passersby can join in, taking control of the attacking robots, on their iOS devices.",
+    "icon": "../img/circuit-soaker.png",
+    "bullets": [
+      "Synchronous competitive multipayer game across Windows touch screen and iOS devices",
+      "Push notifications to iOS to alert users to possible games",
+      "Java-based host server to communicate across platforms"
+    ],
+    "technologies": [
+      "C#",
+      "XNA",
+      "iOS",
+      "Java"
+    ]
   },
   {
     "uid": 6,
     "name": "Project Devourer",
     "blurb": "On-set rough cuts using footage imported to an iPad.",
+    "description": "An app for the quick editing of films for rough cuts on set. Shoot footage from your iPad or import footage to the iPad to use simple non-linear editing tools to create daily cuts. Export the cuts to Final Cut Pro or Adobe Premier for more refined editing later.",
+    "bullets": [
+      "Export rough-cuts to formats for import into Adobe Premier and Final Cut Pro",
+      "Built non-linear editing timeline using custom iOS views"
+    ],
+    "technologies": [
+      "iOS",
+      "AV Foundation",
+      "C"
+    ],
     "icon": "../img/devourer_icon.png"
   },
   {
