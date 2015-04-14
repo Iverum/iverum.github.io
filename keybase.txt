@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/iverum
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.blakehair.com
+  * I am iverum (https://keybase.io/iverum) on keybase.
+  * I have a public key with fingerprint 66C8 B34D 1753 D904 2BDC  CA50 B4F2 2552 0329 DE17
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "66c8b34d1753d9042bdcca50b4f225520329de17",
+            "host": "keybase.io",
+            "key_id": "b4f225520329de17",
+            "kid": "0101613714bc3fc0ad66a8ecf1b6167a3da95d6801685e7f203687d27c53cfbc1a260a",
+            "uid": "09fc7ab5592dbcb70a6eb464de255819",
+            "username": "iverum"
+        },
+        "service": {
+            "hostname": "www.blakehair.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1429024259,
+    "expire_in": 157680000,
+    "prev": "47ce67ce1eb289b7bdc19c8d7a8d152ebf466092dba135d0aaf034223149d117",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMM6AnicbZJtTFtVGMfbwVjWwFgYZqCb0xsY24Ry3+9tMSLBoYtMXtaxwdi6+3Ja
+7kp7y20LVsBpMpzxBSTAnCEGQb7ZZGxQZQwCjG5ICqg4gaHDkSEyZhiRN11APcX5
+zZOcnJzn+f9/z3meHF9YkEqjbvs9Njto/+ROtb831aU6mqANKkV4WXQj+lLEAjYO
+k2QzA8WuSDYnokdoWmB5ghQxhiJEHUrivCgIHIXypAnHKQpHCVwnAoxB4pEC2RFw
+QAzPOYBWkmEMXoySCKP/o7dsJFAMxWiMYDCSFwiTgHIiTXMsEEwYT2M0wxEip6NE
+moUqlgKMCRJolhFxRqAIwcQLGIfTKAdxrn9xOpPAcDxF6XCRF3gG5WjAkzQpAlid
+xXQBoQMoNs4KoFoqBorLipTHIzBWLAkgMIBAH4/zJSUlWr6Qs4ACTlK0gmyFdrsi
+O2VBLoTpAqfTrg+4nW77hhzwxscgIy/ZRDhJaIA1HJJsQ/QYVApOKUDGSFyH4iRO
+6eIR8LpdUoBRCigoBnYKV6AMKIZIkhEADTcGeJzV8QwcP6YTWJHhWBGjcMCbSJpG
+A81yGEGJKMeZUILEcQIjdSK2MWcHKLLJiJ6Az+TMEOmQzDbO6VIAUn69Nz9Ypdao
+QjZvCvwFlWbr9v9+SFBY+Pqe1Mjq0ox7e9L7/7Cs+j+fXnz/vdYnlC2dLWENXa09
+q0PeI1bv1cnBb0qSztVV3T+Q3J7XPDBWyNxaOS3v5dqjPjkSdSoyrLFv6o5hWsl8
+5fnxCtKzdHhtbOnA5bb01gfU6uqmHURckiV0cuRgc8wPg9PDlZmT79rv9n9x/Jgn
+RJ17LHk+7uzuu4/M+029HQujaVJqqMsbN1F+0qfZd2+bomkIvzq+5W3CML9sDjak
+JMQbn33tfENJbMVNe0ZWxI9nbjcw69uHz4GRiZ7b80xcZXzC4tdC1zM5a8sDi5sX
+iiLY5kPd+V7KP4hTp9rSDnvKfNaUS7mx2p6LGbOHTvy0U++zSt6jUekHb9adzHpV
+k7v36eiRwisRp8/6Qi/UsEO7Hj15fnTh147a39xpM7u2Rbt7hv4yRrw147hlH7+f
+3x+VPvfc1CLva+pan7vxqb3+xRrvWPd3s1Tew86B2rrK2r+rUjsfMA9bv/2y+rKh
+KnOrvs87XNB+ouflazdoVWdpAf/ZlXe++vD48sxgojouxuwWJvo+Skm5sy+j6HuD
+M7rJHzkXIzS2/FIrv1F/wROZNzMavHQ94qnuxvGfd2gtSZc+XilzfYBj10LUHUFn
+VNoX/NXh0RX+2Aq7OzW5ZqTV3OIyqPJysnfXD7wpt5eJU39WW1SexItNWSFdVdrs
+2ZXEl9Ymcv4BlmeqTQ==
+=DUQc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/iverum
+
+==================================================================
