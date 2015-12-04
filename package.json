@@ -1,0 +1,26 @@
+{
+  "name": "iverum.github.io",
+  "version": "1.0.0",
+  "description": "Blake Hair's personal website",
+  "main": "main.js",
+  "scripts": {
+    "start": "browserify -t [ babelify --presets [ react ] ] js/main.js -o build/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iverum/iverum.github.io.git"
+  },
+  "author": "Blake Hair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iverum/iverum.github.io/issues"
+  },
+  "homepage": "https://github.com/Iverum/iverum.github.io#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}
