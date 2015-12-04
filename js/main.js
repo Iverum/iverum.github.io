@@ -1,13 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-var ProjectCard = React.createClass({
-  render: function() {
-    return <h1>Hello, world!</h1>
-  }
-})
+var ProjectCard = require('./components/project_card')
 
 ReactDOM.render(
-  <ProjectCard/>,
+  (
+    <div className='row'>
+      <div className='col s12 m6'>
+        <ProjectCard/>
+      </div>
+    </div>
+  ),
   document.getElementById('content')
 );
