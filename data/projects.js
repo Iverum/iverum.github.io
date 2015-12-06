@@ -2,7 +2,7 @@ module.exports =
 [{
   "title": "BSU Achievements",
   "blurb": "The gamification of education at Ball State University.",
-  "image": "http://placehold.it/350x250",
+  "image": "images/achievements.png",
   "description": "Ball State Achievements allows Ball State students to complete Achievements and recieve rewards by participating in the college experience. Students may choose from several categories such as Athletics, Academics, Culture, Exploration, and more to find Achievements they are interested in completing. Upon completion, they will be rewarded with Experience and Bennies that they can spend in the Store to purchase real merchandise from the BSU Bookstore.",
   "links": [{
     "text": "App Store",

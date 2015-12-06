@@ -40,16 +40,16 @@ var ProjectCard = React.createClass({
     }
 
     return (
-      <section className='card medium' style={{
+      <section className='card large' style={{
           width: '350px',
           marginLeft: '15px',
           margineRight: '15px',
         }}>
         <div className="card-image waves-effect waves-block">
           <img className="activator" src={this.props.image}/>
-          <span className="card-title activator">{this.props.title}</span>
         </div>
         <div className='card-content'>
+          <p className="card-title activator">{this.props.title}</p>
           <span>{this.props.content}</span>
         </div>
         {description}
