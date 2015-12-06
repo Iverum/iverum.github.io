@@ -1,6 +1,7 @@
 var React = require('react')
 var PropTypes = React.PropTypes
 var _ = require('lodash')
+var cn = require('classnames')
 
 var ProjectCard = React.createClass({
 
@@ -45,11 +46,11 @@ var ProjectCard = React.createClass({
           marginLeft: '15px',
           margineRight: '15px',
         }}>
-        <div className="card-image waves-effect waves-block">
-          <img className="activator" src={this.props.image}/>
+        <div className={cn('card-image', {'waves-effect waves-block': this.props.description})}>
+          <img className={cn({"activator": this.props.description})} src={this.props.image}/>
         </div>
         <div className='card-content'>
-          <p className="card-title activator">{this.props.title}</p>
+          <p className={cn('card-title', {"activator": this.props.description})}>{this.props.title}</p>
           <span>{this.props.content}</span>
         </div>
         {description}
