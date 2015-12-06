@@ -33,8 +33,8 @@ var ProjectCard = React.createClass({
 
     if (this.props.description) {
       description = (
-        <div className="card-reveal">
-          <span className="card-title">{this.props.title}<i className="material-icons right">close</i></span>
+        <div className='card-reveal'>
+          <span className='card-title'>{this.props.title}<i className='material-icons right'>close</i></span>
           <p>{this.props.description}</p>
         </div>
       )
@@ -47,10 +47,10 @@ var ProjectCard = React.createClass({
           margineRight: '15px',
         }}>
         <div className={cn('card-image', {'waves-effect waves-block': this.props.description})}>
-          <img className={cn({"activator": this.props.description})} src={this.props.image}/>
+          <img className={cn({'activator': this.props.description})} src={this.props.image}/>
         </div>
         <div className='card-content'>
-          <p className={cn('card-title', {"activator": this.props.description})}>{this.props.title}</p>
+          <p className={cn('card-title', {'activator': this.props.description})}>{this.props.title}</p>
           <span>{this.props.content}</span>
         </div>
         {description}
