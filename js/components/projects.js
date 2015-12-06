@@ -6,6 +6,7 @@ var ProjectCard = require('./project_card')
 var Projects = React.createClass({
 
   propTypes: {
+    anchor: PropTypes.string.isRequired,
     projects: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string.isRequired,
       blurb: PropTypes.string.isRequired,
@@ -32,9 +33,9 @@ var Projects = React.createClass({
       )
     })
     return (
-      <article>
+      <article id={this.props.anchor}>
         <nav className='teal'>
-          <a href="#" className="brand-logo">Projects</a>
+          <a href={'#'+this.props.anchor} className="brand-logo">Projects</a>
         </nav>
         <section style={{
             display: 'flex',

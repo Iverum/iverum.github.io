@@ -6,7 +6,7 @@ var projects = require('../data/projects')
 
 ReactDOM.render(
   (
-    <Projects projects={projects} />
+    <Projects anchor='projects' projects={projects} />
   ),
   document.getElementById('content')
 );
