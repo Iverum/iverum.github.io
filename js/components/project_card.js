@@ -28,7 +28,7 @@ var ProjectCard = React.createClass({
       : null
 
     return (
-      <section className='card' style={{
+      <section className='card medium' style={{
           width: '350px',
           marginLeft: '15px',
           margineRight: '15px',
