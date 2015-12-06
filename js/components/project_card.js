@@ -11,7 +11,11 @@ var ProjectCard = React.createClass({
 
   render: function() {
     return (
-      <section className='card'>
+      <section className='card' style={{
+          width: '350px',
+          marginLeft: '15px',
+          margineRight: '15px',
+        }}>
         <div className="card-image">
           <img src={this.props.image}/>
           <span className="card-title">{this.props.title}</span>
