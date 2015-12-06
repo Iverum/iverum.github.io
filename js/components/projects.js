@@ -32,13 +32,18 @@ var Projects = React.createClass({
       )
     })
     return (
-      <section style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-        }}>
-        {projects}
-      </section>
+      <article>
+        <nav className='teal'>
+          <a href="#" className="brand-logo">Projects</a>
+        </nav>
+        <section style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+          }}>
+          {projects}
+        </section>
+      </article>
     )
   }
 

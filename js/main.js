@@ -6,11 +6,7 @@ var projects = require('../data/projects')
 
 ReactDOM.render(
   (
-    <div className='row'>
-      <div className='col s12 m12'>
-        <Projects projects={projects} />
-      </div>
-    </div>
+    <Projects projects={projects} />
   ),
   document.getElementById('content')
 );
