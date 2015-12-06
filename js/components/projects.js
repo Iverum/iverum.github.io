@@ -10,6 +10,7 @@ var Projects = React.createClass({
       title: PropTypes.string.isRequired,
       blurb: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
+      description: PropTypes.string,
       links: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string.isRequired,
         href: PropTypes.string.isRequired,
@@ -26,6 +27,7 @@ var Projects = React.createClass({
           content={project.blurb}
           image={project.image}
           links={project.links}
+          description={project.description}
         />
       )
     })

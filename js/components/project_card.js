@@ -8,6 +8,7 @@ var ProjectCard = React.createClass({
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
+    description: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.shape({
       text: PropTypes.string.isRequired,
       href: PropTypes.string.isRequired,
@@ -15,8 +16,10 @@ var ProjectCard = React.createClass({
   },
 
   render: function() {
-    var actions = this.props.links ?
-      (
+    var actions, description = null
+
+    if (this.props.links) {
+      actions = (
         <div className='card-action'>
           {_.map(this.props.links, function(link) {
             return (
@@ -25,7 +28,16 @@ var ProjectCard = React.createClass({
           })}
         </div>
       )
-      : null
+    }
+
+    if (this.props.description) {
+      description = (
+        <div className="card-reveal">
+          <span className="card-title">{this.props.title}<i className="material-icons right">close</i></span>
+          <p>{this.props.description}</p>
+        </div>
+      )
+    }
 
     return (
       <section className='card medium' style={{
@@ -33,13 +45,14 @@ var ProjectCard = React.createClass({
           marginLeft: '15px',
           margineRight: '15px',
         }}>
-        <div className="card-image">
-          <img src={this.props.image}/>
-          <span className="card-title">{this.props.title}</span>
+        <div className="card-image waves-effect waves-block">
+          <img className="activator" src={this.props.image}/>
+          <span className="card-title activator">{this.props.title}</span>
         </div>
         <div className='card-content'>
           <span>{this.props.content}</span>
         </div>
+        {description}
         {actions}
       </section>
     )
