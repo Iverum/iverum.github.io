@@ -2,7 +2,14 @@ module.exports =
 [{
   "title": "BSU Achievements",
   "blurb": "The gamification of education at Ball State University.",
-  "image": "http://placehold.it/350x150"
+  "image": "http://placehold.it/350x150",
+  "links": [{
+    "text": "App Store",
+    "href": "https://itunes.apple.com/us/app/ball-state-achievements/id901996872?mt=8"
+  }, {
+    "text": "Play Store",
+    "href": "https://play.google.com/store/apps/details?id=com.frogbabyapps.achievements"
+  }]
 }, {
   "title": "Content Pipeline Tooling",
   "blurb": "Scripting/content pipeline tools for in-house game engine.",
