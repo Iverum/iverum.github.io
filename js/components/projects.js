@@ -35,7 +35,7 @@ var Projects = React.createClass({
     return (
       <article id={this.props.anchor}>
         <nav className='teal'>
-          <a href={'#'+this.props.anchor} className="brand-logo">Projects</a>
+          <a style={{paddingLeft: '10px'}} href={'#'+this.props.anchor} className="brand-logo">Projects</a>
         </nav>
         <section style={{
             display: 'flex',
