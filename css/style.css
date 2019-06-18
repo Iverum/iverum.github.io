@@ -6,6 +6,7 @@
   padding: 0;
   border: 0;
   font-family: sans-serif;
+  line-height: 1.25rem;
   color: rgb(5, 5, 5);
   background-color: rgb(250, 250, 250);
   max-width: 60ch;
@@ -49,25 +50,6 @@ a:hover {
   min-width: 12rem;
 }
 
-.sidebar > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5rem;
-}
-
-.sidebar > * > * {
-  flex-basis: 0;
-  margin: 0.5rem;
-  flex-grow: 999;
-  min-width: calc(50% - 1rem);
-}
-
-.sidebar > * > :first-child {
-  flex-basis: 12rem;
-  flex-grow: 1;
-  min-width: 0;
-}
-
 .stack {
   --space: 1rem;
 }
@@ -108,4 +90,23 @@ a:hover {
 .card * {
   display: flex;
   color: white;
+}
+
+.sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.sidebar > * > * {
+  flex-basis: 0;
+  margin: 0.5rem;
+  flex-grow: 999;
+  min-width: calc(50% - 1rem);
+}
+
+.sidebar > * > :first-child {
+  flex-basis: 12rem;
+  flex-grow: 1;
+  min-width: 0;
 }

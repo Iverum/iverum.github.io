@@ -13,3 +13,7 @@
 .cluster > a {
   text-decoration: none;
 }
+
+ul.stack {
+  list-style: none;
+}
