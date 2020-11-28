@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Blake Hair - Comstar</title>
+  <title>Blake Hair - ComStar</title>
   <meta content="Blake Hair" name="author" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="/css/style.css" rel="stylesheet" />
@@ -17,27 +17,39 @@
         <h2><a href="/work">/work</a></h2>
       </nav>
       <main class="stack">
-        <h1 class="underlined">Comstar</h1>
+        <h1 class="underlined">ComStar</h1>
         <section class="stack">
-          <p><a href="https://github.com/Iverum/comstar">Comstar is a Slack Bot</a> that I built to learn more about the
+          <p><a href="https://github.com/Iverum/comstar">ComStar is a Slack Bot</a> that I built to learn more about
+            the
             Slack API and the process of building bots. It was inspired by my time moderating a collection of IRC
             channels on <a href="https://esper.net/">EsperNet</a> while I was in college. While I ended up only
             implementing a handful of commands I built the bot to be an extensible framework with new commands being
             straightforward to add.</p>
           <p>I built this project using Ruby and Ruby on Rails. Rails is probably too much for such a simple project,
-            but it provided a scaffold for the project that let me tinker with Slack rather than spend time on building
+            but it provided a scaffold for the project that let me tinker with Slack rather than spend time on
+            building
             up the underlying pieces of the application.</p>
-          <p>The application itself is a single controller that handles parsing commands and returning results to Slack.
-            Each command is implemented as a model that contains the logic and validation required. New commands can be
+          <p>The application itself is a single controller that handles parsing commands and returning results to
+            Slack.
+            Each command is implemented as a model that contains the logic and validation required. New commands can
+            be
             added by subclassing the root Command class and registering them with the controller. This separation of
             concerns allows commands to be unit tested easily and allows them to be added or removed without impacting
             other commands. The extensive Ruby standard library makes lots of commands very simple to implement.</p>
-          <p>I ended up only implementing a few commands for this project. I ended up stopping work after implementing a
-            simple identification command. Slack does not have the same environment as IRC and there is less of a reason
+          <p>I ended up only implementing a few commands for this project. I ended up stopping work after implementing
+            a
+            simple identification command. Slack does not have the same environment as IRC and there is less of a
+            reason
             for the bots you'd find on IRC like <a href="https://github.com/kxz/omnipresence">Omnipresence</a>. This
-            could be a good starting point for a more robust and focused bot. I have toyed with the idea of introducing
+            could be a good starting point for a more robust and focused bot. I have toyed with the idea of
+            introducing
             it as a knowledge sharing bot inside an engineering organization.
           </p>
+          <aside>
+            The name of this project is a joke about my given name (Blake) and <a
+              href="https://www.sarna.net/wiki/ComStar">a
+              faction in BattleTech</a>
+          </aside>
         </section>
         <section class="stack">
           <h2>Technology</h2>
