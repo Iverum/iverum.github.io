@@ -35,6 +35,11 @@ i {
   background-color: transparent;
 }
 
+time {
+  color: #6f7a89;
+  font-size: 12px;
+}
+
 a {
   color: #8157d6;
 }
