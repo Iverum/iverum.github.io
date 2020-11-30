@@ -65,6 +65,10 @@ td, th {
   text-align: left;
 }
 
+nav.stack > h2 {
+  margin-left: 1rem;
+}
+
 .page {
   min-width: 12rem;
   padding: 1.5rem;
