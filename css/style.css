@@ -53,6 +53,18 @@ a:hover {
   text-decoration: none;
 }
 
+table {
+  border-collapse: collapse;
+  max-width: 100ch;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #b1becb;
+  padding: 0.5rem;
+  text-align: left;
+}
+
 .page {
   min-width: 12rem;
   padding: 1.5rem;
