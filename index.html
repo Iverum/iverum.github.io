@@ -1,51 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/bundle.css">
+    <title>under construction</title>
+    <script data-site="FXTTJPBQ" defer src="https://cdn.usefathom.com/script.js"></script>
+  </head>
+  <body>
+    <main class="ibm-plex-mono-light">
+    <article id="terminal">
+        <p>Wayfarer ANS v1.83.0-alpha</p>
+    </article>
+    <div class="terminal-spinner">&gt; </div>
+</main>
+<link rel="stylesheet" href="/styles/terminal.css">
+<script>
+    const lines = [
+        { text: "(C)2197 Aleph Intelligences" },
+        { text: "Main Processor: SOME FICTIONAL JUNK" },
+        { text: "Memory: A BUNCH" },
+        { text: "Initializing star maps", loading: true },
+        { text: "Initializing ion drives", loading: true },
+        { text: "Initializing command interface", indefinite: true }
+    ]
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-<head>
-  <meta charset="utf-8" />
-  <title>Blake Hair - Home</title>
-  <meta content="Blake Hair" name="author" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="/css/style.css" rel="stylesheet" />
-  <script data-site="FXTTJPBQ" defer src="https://cdn.usefathom.com/script.js"></script>
-</head>
+    async function eventLoop() {
+        const terminal = document.getElementById("terminal")
+        function addLine(line) {
+            var html = "<p"
+            if (line.loading) {
+                html += " class='loading'"
+            } else if (line.indefinite) {
+                html += " class='indefinite'"
+            }
+            html += `>${line.text}</p>`
+            terminal.insertAdjacentHTML("beforeend", html)
+        }
 
-<body>
-  <div class="page sidebar">
-    <div>
-      <nav class="stack">
-        <h1><a href="/">/iverum</a></h1>
-        <h2><a href="/work">/work</a></h2>
-        <h2><a href="/blog">/blog</a></h2>
-        <h2><a href="/ideas">/ideas</a></h2>
-      </nav>
-      <main class="stack">
-        <h1 class="underlined">Who am I?</h1>
-        <p>
-          Hello! I am Blake Hair and I'm a polyglot developer with an interest
-          in language design and end-user programming. I spend a lot of my time these days using
-          JavaScript to build software.
-        </p>
-        <p>
-          I've been
-          <a href="/resume.pdf">building software professionally since 2009</a>
-          and am interested in the human problems that come up in the industry
-          more often than the purely technical ones. I believe that all
-          software should start with people and I am looking to learn more
-          about managing teams and solving problems with interesting people.
-        </p>
-        <h1 class="underlined">What I do now?</h1>
-        <p>
-          Currently I work full time as a senior software engineer at
-          <a href="https://terminus.com/">Terminus</a>. My focus is currently with our Chat product where we are
-          building tools for sales and marketing to engage customers and prospects with relevant context.
-        </p>
-        <h1 class="underlined">Where can I be found?</h1>
-        <p>You can find me and my programming work on <a href="https://github.com/Iverum">GitHub</a>. Most of my
-          professional work is in private repositories, but I have some hobbyist projects available for browsing.</p>
-      </main>
-    </div>
-  </div>
-</body>
+        for (const line of lines) {
+            await sleep(1000)
+            addLine(line)
+            if (line.loading) await sleep(2000)
+        }
+    }
 
+    document.addEventListener("DOMContentLoaded", eventLoop);
+</script>
+
+  </body>
 </html>

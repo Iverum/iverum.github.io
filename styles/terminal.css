@@ -1,0 +1,65 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+}
+
+main {
+  flex: 1 1;
+  margin: 8px;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* HTML: <div class="terminal-spinner"></div> */
+.terminal-spinner::after {
+  content: "";
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { content: "|"; }
+  25% { content: "/"; }
+  50% { content: "-"; }
+  75% { content: "\\"; }
+  100% { content: "|"; }
+}
+
+.loading::after {
+  content: "...OK";
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: ellipsis-width 2s forwards;
+}
+
+@keyframes ellipsis-width {
+  0%   { width: 0; animation-timing-function: step-end; }
+  20%  { width: 1ch; animation-timing-function: step-end; } /* Pop: . */
+  40%  { width: 2ch; animation-timing-function: step-end; } /* Pop: .. */
+  60%  { width: 3ch; animation-timing-function: step-end; } /* Pop: ... */
+  80%  { width: 5ch; }                                      /* Pop: ...OK */
+  100% { width: 5ch; } 
+}
+
+.indefinite::after {
+  content: "...";
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: dots 1.5s steps(4, jump-none) infinite;
+}
+
+@keyframes dots {
+  to { width: 3ch; }
+}
