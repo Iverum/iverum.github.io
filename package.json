@@ -1,0 +1,17 @@
+{
+  "name": "blakehair",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+     "build-ghpages": "npx @11ty/eleventy"
+  },
+  "author": "Blake Hair",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy-fetch": "^5.1.2"
+  }
+}

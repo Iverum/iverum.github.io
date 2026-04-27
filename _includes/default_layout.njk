@@ -1,3 +1,6 @@
+---
+title: iverum
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,24 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="/styles/bundle.css">
-    <title>blogroll - iverum</title>
+    <title>{{ title }}</title>
     <script data-site="FXTTJPBQ" defer src="https://cdn.usefathom.com/script.js"></script>
   </head>
   <body>
     <header>
       <a href="/"><img class="iverum-eye" src="/media/square-eye.png"/></a>
     </header>
-    <main>
-    <article>
-        <p>Here are some other blogs that I think are cool:</p>
-        <ul>
-            <li><a href="https://jkap.io/">Jae Kaplan</a>, software developer &amp; former CEO of Posting @ Cohost</li>
-            <li><a href="https://jamesg.blog/">James' Coffee Blog</a>, run by James, writer &amp; art history student</li>
-            <li><a href="https://joelhooks.com/">Joel Hooks</a>, software developer</li>
-            <li><a href="https://jvns.ca/">Julia Evans</a>, software developer</li>
-            <li><a href="https://blog.dante.cool/">videodante</a>, run by Dante Douglas, writer &amp; gamedev</li>
-        </ul>
-    </article>
-</main>
+    {{ content | safe }}
   </body>
 </html>

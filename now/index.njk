@@ -1,0 +1,84 @@
+---
+layout: default_layout.njk
+title: now - iverum
+---
+<style>
+    .letterboxd {
+        display: grid;
+        /* Column 1 fits the image, Column 2 takes the rest */
+        grid-template-columns: min-content 1fr;
+        column-gap: 1.5rem;
+        margin-bottom: 2rem;
+        align-items: start;
+    }
+
+    /* 1. Position the Image (the first <p> tag) */
+    .letterboxd p:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        /* Spans both the title and date rows */
+        margin: 0;
+    }
+
+    /* 2. Position the Title (h3) */
+    .letterboxd h3 {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0 0 0.5rem;
+        /* Space below title */
+        font-size: 1.2rem;
+    }
+
+    /* 3. Position the Watch Date (the second <p> tag) */
+    .letterboxd p:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+        color: #666;
+        /* Optional: makes the date look like a sub-caption */
+    }
+
+    /* Ensure images don't overflow */
+    .letterboxd img {
+        display: block;
+        height: 100px;
+        /* Adjust size as needed */
+        width: auto;
+        border-radius: 4px;
+    }
+</style>
+<main>
+    <article>
+        <h1>what I'm doing now</h1>
+        <section>
+            <h2>hobby</h2>
+            <p>In my free time I alternate between hobby model building, cooking, software development, and gaming.</p>
+            {# <h3>modeling</h3>
+            <p>Placeholder for my in-progess model?</p> #}
+            <h3>cooking</h3>
+            <p>Every year my partner and I host a Thanksgiving lunch for our families. We generally try to aim for something a little more unique than the traditional Thanksgiving turkey and sides. Our goal this year is to make an Indonesian-inspired Thanksgiving so we're practicing Indonesian meals recently.</p>
+            <p>Our previous Thanksgiving meals were:</p>
+            <ul>
+                <li>Tamales. We made four different fillings: turkey, corn 'casserole', sweet potato, and cranberry pecan (a sweeter take).</li>
+                <li>Indian-inspired. We served chaat samosas filled with turkey keema (and keema aloo for vegetarians), sweet potato pakoras, chole, dhal makhani, and a rose &amp; cardamom cheesecake.</li>
+            </ul>
+            {# <h3>gaming</h3>
+            <p>Placeholder for Steam integration?</p> #}
+        </section>
+        <section>
+            <h2>movies</h2>
+            {% for film in letterboxd %}
+                <div class="letterboxd">
+                    <h3>{{ film.title }}</h3>
+                    {{ film.description | safe }}
+                </div>
+            {% endfor %}
+        </section>
+        <section>
+            <h2>work</h2>
+            <p style="max-width: 47ch;">Currently I'm the Director of Product &amp; Engineering at <a href="https://decisionrx.com">DecisionRx</a>, a healthcare tech company.</p>
+            <p>We use genetic testing to uncover risks in patients taking multiple prescription medications to reduce the rate of medication failure and possible hospitalization.</p>
+            <p>We are a small company still, so even with a Director title I spend a lot of my time hands on across the business. The experience has taught me a great deal about the healthcare industry, pharmacueticals, and genetics.</p>
+        </section>
+    </article>
+</main>
