@@ -62,5 +62,10 @@ ul.posts {
     display: flex;
     align-items: baseline;
     gap: 1rem;
+
+    p {
+      color: #6c6c6c;
+      font-size: 0.9rem;
+    }
   }
 }
