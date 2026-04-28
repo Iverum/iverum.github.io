@@ -2,50 +2,48 @@
 layout: default_layout.njk
 title: what I'm doing now
 ---
-<main>
-    <article>
-        <section>
-            <h2>hobby</h2>
-            <p style="max-width: 44ch;">In my free time I build models, cook, develop software, and play games (video & tabletop).</p>
-            <h3>modeling</h3>
-            <section class="gunpla-hangar">
-                {% for kit in gunpla %}
-                    <div class="kit-card">
-                        <span class="badge {{ kit.Grade }}">{{ kit.Grade }}</span>
-                        <h4>{{ kit['Kit Name'] }}</h4>
-                        <div class="kit-meta">Started: {{ kit['Start Date'] }}</div>
-                        <div class="kit-meta">
-                            <strong>Status:</strong> {{ kit.Status }}<br>
-                            <strong>Substatus:</strong> {{ kit['Sub-Status'] }}
-                        </div>
+<article>
+    <section>
+        <h2>hobby</h2>
+        <p style="max-width: 44ch;">In my free time I build models, cook, develop software, and play games (video & tabletop).</p>
+        <h3>modeling</h3>
+        <section class="gunpla-hangar">
+            {% for kit in gunpla %}
+                <div class="kit-card">
+                    <span class="badge {{ kit.Grade }}">{{ kit.Grade }}</span>
+                    <h4>{{ kit['Kit Name'] }}</h4>
+                    <div class="kit-meta">Started: {{ kit['Start Date'] }}</div>
+                    <div class="kit-meta">
+                        <strong>Status:</strong> {{ kit.Status }}<br>
+                        <strong>Substatus:</strong> {{ kit['Sub-Status'] }}
                     </div>
-                {% endfor %}
-            </section>
-            <h3>cooking</h3>
-            <p>Every year my partner and I host a Thanksgiving lunch for our families. We generally try to aim for something a little more unique than the traditional Thanksgiving turkey and sides. Our goal this year is to make an Indonesian-inspired Thanksgiving so we're practicing Indonesian meals recently.</p>
-            <p>Our previous Thanksgiving meals were:</p>
-            <ul>
-                <li>Tamales. We made four different fillings: turkey, corn 'casserole', sweet potato, and cranberry pecan (a sweeter take).</li>
-                <li>Indian-inspired. We served chaat samosas filled with turkey keema (and keema aloo for vegetarians), sweet potato pakoras, chole, dhal makhani, and a rose &amp; cardamom cheesecake.</li>
-            </ul>
-            {# <h3>gaming</h3>
-            <p>Placeholder for Steam integration?</p> #}
-        </section>
-        <section>
-            <h2>movies</h2>
-            {% for film in letterboxd %}
-                <div class="letterboxd">
-                    <a href={{ film.link}}><h3>{{ film.title }}</h3></a>
-                    {{ film.description | safe }}
                 </div>
             {% endfor %}
         </section>
-        <section>
-            <h2>work</h2>
-            <p style="max-width: 47ch;">Currently I'm the Director of Product &amp; Engineering at <a href="https://decisionrx.com">DecisionRx</a>, a healthcare tech company.</p>
-            <p>We use genetic testing to uncover risks in patients taking multiple prescription medications to reduce the rate of medication failure and possible hospitalization.</p>
-            <p>We are a small company still, so even with a Director title I spend a lot of my time hands on across the business. The experience has taught me a great deal about the healthcare industry, pharmacueticals, and genetics.</p>
-        </section>
-    </article>
-</main>
+        <h3>cooking</h3>
+        <p>Every year my partner and I host a Thanksgiving lunch for our families. We generally try to aim for something a little more unique than the traditional Thanksgiving turkey and sides. Our goal this year is to make an Indonesian-inspired Thanksgiving so we're practicing Indonesian meals recently.</p>
+        <p>Our previous Thanksgiving meals were:</p>
+        <ul>
+            <li>Tamales. We made four different fillings: turkey, corn 'casserole', sweet potato, and cranberry pecan (a sweeter take).</li>
+            <li>Indian-inspired. We served chaat samosas filled with turkey keema (and keema aloo for vegetarians), sweet potato pakoras, chole, dhal makhani, and a rose &amp; cardamom cheesecake.</li>
+        </ul>
+        {# <h3>gaming</h3>
+        <p>Placeholder for Steam integration?</p> #}
+    </section>
+    <section>
+        <h2>movies</h2>
+        {% for film in letterboxd %}
+            <div class="letterboxd">
+                <a href={{ film.link}}><h3>{{ film.title }}</h3></a>
+                {{ film.description | safe }}
+            </div>
+        {% endfor %}
+    </section>
+    <section>
+        <h2>work</h2>
+        <p style="max-width: 47ch;">Currently I'm the Director of Product &amp; Engineering at <a href="https://decisionrx.com">DecisionRx</a>, a healthcare tech company.</p>
+        <p>We use genetic testing to uncover risks in patients taking multiple prescription medications to reduce the rate of medication failure and possible hospitalization.</p>
+        <p>We are a small company still, so even with a Director title I spend a lot of my time hands on across the business. The experience has taught me a great deal about the healthcare industry, pharmacueticals, and genetics.</p>
+    </section>
+</article>
 <link rel="stylesheet" href="/styles/now.css">

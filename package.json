@@ -15,6 +15,7 @@
     "@11ty/eleventy-fetch": "^5.1.2",
     "dotenv": "^17.4.2",
     "google-auth-library": "^10.6.2",
-    "google-spreadsheet": "^5.2.0"
+    "google-spreadsheet": "^5.2.0",
+    "luxon": "^3.7.2"
   }
 }

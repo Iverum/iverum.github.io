@@ -20,13 +20,23 @@ title: iverum
       <h1>{{ title }}</h1>
       <nav>
         <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/now">now</a></li>
-          <li><a href="/blogroll">blogroll</a></li>
-          <li><a href="/about">about</a></li>
+          <li>
+            <a href="/">home</a>
+          </li>
+          <li>
+            <a href="/now">now</a>
+          </li>
+          <li>
+            <a href="/blogroll">blogroll</a>
+          </li>
+          <li>
+            <a href="/about">about</a>
+          </li>
         </ul>
       </nav>
     </header>
-    {{ content | safe }}
+    <main>
+      {{ content | safe }}
+    </main>
   </body>
 </html>

@@ -56,3 +56,11 @@ main {
   max-width: 62ch;
   padding-bottom: 4rem;
 }
+
+ul.posts {
+  li>div {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
