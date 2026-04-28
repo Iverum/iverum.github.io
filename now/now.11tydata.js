@@ -1,8 +1,13 @@
+require('dotenv').config()
+
 const Fetch = require("@11ty/eleventy-fetch");
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { JWT } = require('google-auth-library');
 
 module.exports = async function () {
-    const letterboxd = getLetterboxdData();
-    return { letterboxd };
+    const letterboxd = await getLetterboxdData();
+    const gunpla = await getGunplaData();
+    return { letterboxd, gunpla };
 };
 
 /* LETTERBOXD */
@@ -33,4 +38,56 @@ function parseRssEntryToJson(item) {
     const rewatch = children.find(c => c.name === 'letterboxd:rewatch').children[0].text === 'Yes';
     const description = children.find(c => c.name === 'description').children[0].text;
     return { title, link, watchedDate, rewatch, description }
+}
+
+/* Google Sheets */
+async function getGunplaData() {
+    const gunplaSheet = new Spreadsheet(process.env.GUNPLA_SHEET_ID);
+    const gunpla = await gunplaSheet.sheet();
+    return gunpla.filter(g => g.Status === 'In Progress');
+}
+
+
+class Spreadsheet {
+    constructor(spreadsheetId) {
+        this.spreadsheetId = spreadsheetId;
+        this.cache = null;
+        this.spreadsheet = null;
+    }
+
+    async sheet() {
+        this.cache = new Fetch.AssetCache(`spreadsheet-${this.spreadsheetId}`);
+        if (this.cache.isCacheValid('1h')) {
+            return this.cache.getCachedValue();
+        }
+
+        await this.loadSpreadsheet();
+        const sheet = this.spreadsheet.sheetsByIndex[0];
+        console.log(`fresh spreadsheet cache: ${this.spreadsheet.title} (${sheet.title})`);
+        const rows = await sheet.getRows();
+        const fields = sheet.headerValues;
+        const data = rows.map(row => Object.fromEntries(fields.map(f => [f, row.get(f)])));
+        await this.cache.save(data, "json");
+        return data;
+    }
+
+    async loadSpreadsheet() {
+        if (this.spreadsheet) return;
+
+        this.spreadsheet = new GoogleSpreadsheet(this.spreadsheetId, this.getJwt());
+        await this.spreadsheet.loadInfo();
+    }
+
+    getJwt() {
+        const SCOPES = [
+            'https://www.googleapis.com/auth/spreadsheets',
+            'https://www.googleapis.com/auth/drive.file',
+        ];
+
+        return new JWT({
+            email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+            key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/gm, '\n'),
+            scopes: SCOPES,
+        });
+    }
 }

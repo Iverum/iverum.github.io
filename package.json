@@ -5,13 +5,16 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-     "build-ghpages": "npx @11ty/eleventy"
+    "build-ghpages": "npx @11ty/eleventy"
   },
   "author": "Blake Hair",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
-    "@11ty/eleventy-fetch": "^5.1.2"
+    "@11ty/eleventy-fetch": "^5.1.2",
+    "dotenv": "^17.4.2",
+    "google-auth-library": "^10.6.2",
+    "google-spreadsheet": "^5.2.0"
   }
 }
