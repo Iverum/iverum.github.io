@@ -68,7 +68,7 @@ title: what I'm doing now
             <h2>movies</h2>
             {% for film in letterboxd %}
                 <div class="letterboxd">
-                    <h3>{{ film.title }}</h3>
+                    <a href={{ film.link}}><h3>{{ film.title }}</h3></a>
                     {{ film.description | safe }}
                 </div>
             {% endfor %}

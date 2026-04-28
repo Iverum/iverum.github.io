@@ -1,14 +1,18 @@
 const Fetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-    const rssFeed = await fetchLetterboxdRss();
-    const letterboxd = getItems(rssFeed);
+    const letterboxd = getLetterboxdData();
     return { letterboxd };
 };
 
+/* LETTERBOXD */
+async function getLetterboxdData() {
+    const rssFeed = await fetchLetterboxdRss();
+    return getItems(rssFeed);
+}
+
 async function fetchLetterboxdRss() {
     let url = "https://letterboxd.com/iverum/rss/";
-
     return await Fetch(url, {
         duration: "1d",
         type: "parsed-xml",
