@@ -53,5 +53,6 @@ header {
 
 main {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-  width: 62ch;
+  max-width: 62ch;
+  padding-bottom: 4rem;
 }
