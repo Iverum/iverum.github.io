@@ -2,58 +2,25 @@
 layout: default_layout.njk
 title: what I'm doing now
 ---
-<style>
-    .letterboxd {
-        display: grid;
-        /* Column 1 fits the image, Column 2 takes the rest */
-        grid-template-columns: min-content 1fr;
-        column-gap: 1.5rem;
-        margin-bottom: 2rem;
-        align-items: start;
-    }
-
-    /* 1. Position the Image (the first <p> tag) */
-    .letterboxd p:nth-of-type(1) {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        /* Spans both the title and date rows */
-        margin: 0;
-    }
-
-    /* 2. Position the Title (h3) */
-    .letterboxd h3 {
-        grid-column: 2;
-        grid-row: 1;
-        margin: 0 0 0.5rem;
-        /* Space below title */
-        font-size: 1.2rem;
-    }
-
-    /* 3. Position the Watch Date (the second <p> tag) */
-    .letterboxd p:nth-of-type(2) {
-        grid-column: 2;
-        grid-row: 2;
-        margin: 0;
-        color: #666;
-        /* Optional: makes the date look like a sub-caption */
-    }
-
-    /* Ensure images don't overflow */
-    .letterboxd img {
-        display: block;
-        height: 100px;
-        /* Adjust size as needed */
-        width: auto;
-        border-radius: 4px;
-    }
-</style>
 <main>
     <article>
         <section>
             <h2>hobby</h2>
-            <p>In my free time I build models, cook, develop software, and play games (video & tabletop).</p>
-            {# <h3>modeling</h3>
-            <p>Placeholder for my in-progess model?</p> #}
+            <p style="max-width: 44ch;">In my free time I build models, cook, develop software, and play games (video & tabletop).</p>
+            <h3>modeling</h3>
+            <section class="gunpla-hangar">
+                {% for kit in gunpla %}
+                    <div class="kit-card">
+                        <span class="badge {{ kit.Grade }}">{{ kit.Grade }}</span>
+                        <h4>{{ kit['Kit Name'] }}</h4>
+                        <div class="kit-meta">Started: {{ kit['Start Date'] }}</div>
+                        <div class="kit-meta">
+                            <strong>Status:</strong> {{ kit.Status }}<br>
+                            <strong>Substatus:</strong> {{ kit['Sub-Status'] }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
             <h3>cooking</h3>
             <p>Every year my partner and I host a Thanksgiving lunch for our families. We generally try to aim for something a little more unique than the traditional Thanksgiving turkey and sides. Our goal this year is to make an Indonesian-inspired Thanksgiving so we're practicing Indonesian meals recently.</p>
             <p>Our previous Thanksgiving meals were:</p>
@@ -81,3 +48,4 @@ title: what I'm doing now
         </section>
     </article>
 </main>
+<link rel="stylesheet" href="/styles/now.css">
