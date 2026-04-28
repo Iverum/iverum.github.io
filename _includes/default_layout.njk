@@ -17,6 +17,15 @@ title: iverum
   <body>
     <header>
       <a href="/"><img class="iverum-eye" src="/media/square-eye.png"/></a>
+      <h1>{{ title }}</h1>
+      <nav>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/now">now</a></li>
+          <li><a href="/blogroll">blogroll</a></li>
+          <li><a href="/about">about</a></li>
+        </ul>
+      </nav>
     </header>
     {{ content | safe }}
   </body>
