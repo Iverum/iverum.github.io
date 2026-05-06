@@ -16,8 +16,6 @@ title: iverum
   </head>
   <body>
     <header>
-      <a href="/"><img class="iverum-eye" src="/media/square-eye.png"/></a>
-      <h1>{{ title }}</h1>
       <nav>
         <ul>
           <li>
@@ -37,6 +35,10 @@ title: iverum
           </li>
         </ul>
       </nav>
+      <div>
+        <a href="/"><img class="iverum-eye" src="/media/square-eye.png"/></a>
+        <h1>{{ title }}</h1>
+      </div>
     </header>
     <main>
       {{ content | safe }}

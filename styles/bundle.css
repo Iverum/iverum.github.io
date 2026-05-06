@@ -20,15 +20,13 @@ a:visited {
 
 header {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 1em;
   position: relative;
   left: -20px;
 
   h1 {
     margin: 0;
+    margin-left: 0.5em;
   }
 
   .iverum-eye {
@@ -37,16 +35,19 @@ header {
     border-radius: 15px;
     position: fixed;
     left: 32.5px;
-    top: 70px;
+    top: 92px;
   }
 
   nav {
+    margin-left: 1em;
+
     ul {
       gap: 1em;
       display: flex;
       flex-direction: row;
       list-style: none;
       margin: 0;
+      padding: 0;
     }
   }
 }
