@@ -2,8 +2,9 @@
 layout: default_layout.njk
 title: projects
 ---
+<p>This page collects projects that I'm working on. These are entirely personal projects and I may never actually work through them in any real way.</p>
 <ul class="posts">
-    {%- for post in collections.projects | reverse -%}
+    {%- for post in collections.projects -%}
         <li>
             <div>
                 <a href="{{ post.page.url }}">
