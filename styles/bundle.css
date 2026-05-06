@@ -1,7 +1,7 @@
 body {
   background-color: rgb(255, 255, 244);
   font-size: 1.2rem;
-  margin-top: 64px;
+  margin-top: 46px;
   padding: 0 80px;
 }
 
@@ -35,7 +35,7 @@ header {
     border-radius: 15px;
     position: fixed;
     left: 32.5px;
-    top: 92px;
+    top: 75px;
   }
 
   nav {
