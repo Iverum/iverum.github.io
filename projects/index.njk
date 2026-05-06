@@ -1,0 +1,16 @@
+---
+layout: default_layout.njk
+title: projects
+---
+<ul class="posts">
+    {%- for post in collections.projects | reverse -%}
+        <li>
+            <div>
+                <a href="{{ post.page.url }}">
+                    {{ post.data.title }}
+                </a>
+                </p>
+            </div>
+        </li>
+    {%- endfor -%}
+</ul>
