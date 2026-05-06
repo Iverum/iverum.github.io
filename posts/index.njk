@@ -3,7 +3,7 @@ layout: default_layout.njk
 title: posts
 ---
 <ul class="posts">
-    {%- for post in collections.posts -%}
+    {%- for post in collections.post | reverse -%}
         <li>
             <div>
                 <a href="{{ post.page.url }}">

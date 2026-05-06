@@ -25,7 +25,7 @@ layout: default_layout.njk
 <section>
     <h3 style="margin-bottom: 0; margin-top: 2.5rem;">recent posts</h3>
     <ul class="posts" style="margin: 0;">
-        {%- for post in collections.posts.slice(0,5) -%}
+        {%- for post in collections.posts.slice(0,5) | reverse -%}
             <li>
                 <div>
                     <a href="{{ post.page.url }}">
