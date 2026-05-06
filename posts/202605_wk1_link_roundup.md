@@ -6,3 +6,4 @@ tags: ["posts", "links"]
 ---
 
 https://www.youtube.com/watch?v=Zxmw3xazcd8
+https://barnsworthburning.net/extracts/rechxgCFt4OkQUsKD
