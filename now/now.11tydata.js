@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const Fetch = require("@11ty/eleventy-fetch");
 const { GoogleSpreadsheet } = require('google-spreadsheet');
