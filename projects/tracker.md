@@ -20,3 +20,9 @@ Of course, while I'm working on this project I have no structure for what this p
 Experimentation.
 
 I've created an Airtable Base and I'm tinkering with the API now.
+
+## What I've learned?
+
+* Airtable's AI chatbot is pushy. It takes a minute to get by it when you sign up for an account.
+  * It also isn't very clever. I asked it to make a field to show the percentage of tasks complete and it tried to prompt an agent with some "you're an expert statistician" junk when all I needed was a formula in a column.
+* Unsurprisingly, there isn't a good way to read from an Airtable Base without using some kind of secret key, so that throws a wrench in some part of [A Commonplace Book](/projects/a-commonplace-book/). I think I just need to approach it as a bigger task and maybe create a little more infrastructure. I'm not sure if that means that Airtable is out of the running in this case.

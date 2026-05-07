@@ -7,7 +7,6 @@ const projectBase = airtable.base('appARRXfFPKbUy90u');
 
 module.exports = async function () {
 	const projects = await getProjects();
-	console.log({ projects })
 	return {
 		permalink: function ({ title }) {
 			return `/projects/${this.slugify(title)}/`;
