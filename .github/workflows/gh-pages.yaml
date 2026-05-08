@@ -20,6 +20,7 @@ jobs:
       GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
       GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
       GUNPLA_SHEET_ID: ${{ secrets.GUNPLA_SHEET_ID }}
+      AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
 
