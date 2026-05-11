@@ -12,9 +12,6 @@ module.exports = async function () {
 	const projects = await getProjects();
 	return {
 		projects,
-		permalink: function ({ title }) {
-			return `/projects/${this.slugify(title)}/`;
-		},
 	}
 };
 
@@ -32,6 +29,7 @@ async function getProjects() {
 			view: "Grid view"
 		}).eachPage(function page(records, fetchNextPage) {
 			records.forEach(record => projects.push({
+				id: record.id,
 				name: record.get("Name"),
 				totalTasks: record.get("# Tasks (Total)"),
 				completedTasks: record.get("# Tasks (Done)"),

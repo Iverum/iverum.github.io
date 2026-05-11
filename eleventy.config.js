@@ -12,6 +12,12 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  eleventyConfig.addShortcode("project", function (projectId) {
+    const { ctx: { environments } } = this;
+    const { projects } = environments['projects.11tydata'];
+    console.log({ project: projects.find(p => p.id === projectId), projectId });
+  });
+
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",

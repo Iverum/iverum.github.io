@@ -17,6 +17,8 @@ Of course, while I'm working on this project I have no structure for what this p
 
 ## What's the current status?
 
+{% project "recylF51Ky1uWy9Us" %}
+
 Experimentation.
 
 I've created an Airtable Base and I'm tinkering with the API now.
