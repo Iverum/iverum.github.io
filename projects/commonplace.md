@@ -21,7 +21,7 @@ Honestly, this project is fairly ambitious and will probably be something I tink
 
 ## What's the current status?
 
-I'm working on [a project tracker](/projects/tracker/) before I break into this one.
+I'm working on [a project tracker](/projects/a-project-tracker/) before I break into this one.
 
 [^1]: See [my first blog post.](/posts/building-my-personal-website/)
 [^2]: My Gunpla tracker and Letterboxd integration use a scheduled GitHub Action to rebuild this static site. A commonplace book probably needs to update more quickly when something is added.
