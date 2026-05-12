@@ -17,7 +17,10 @@ module.exports = function (eleventyConfig) {
     const { projects } = environments['projects.11tydata'];
     const project = projects.find(p => p.id === projectId);
     const percentComplete = (project.completedTasks / project.totalTasks) * 100;
-    console.log({ project, projectId, percentComplete });
+    console.log({ project, tasks: project.tasks });
+    const taskList = project.tasks.map(task => `
+      <li class="${task.status === "Done" ? "done" : task.status === "In progress" ? "progress" : ""}">${task.name}</li>
+    `).join("");
 
 
     return `
@@ -25,7 +28,7 @@ module.exports = function (eleventyConfig) {
       <div class="progress-bar-background"></div>
       <div class="progress-bar" style="width: calc(${percentComplete}% + 2rem);"></div>
       <ul>
-        <li>Need to fetch tasks</li>
+        ${taskList}
       </ul>
     </section>
     `
