@@ -17,7 +17,6 @@ module.exports = function (eleventyConfig) {
     const { projects } = environments['projects.11tydata'];
     const project = projects.find(p => p.id === projectId);
     const percentComplete = (project.completedTasks / project.totalTasks) * 100;
-    console.log({ project, tasks: project.tasks });
     const taskList = project.tasks.map(task => `
       <li class="${task.status === "Done" ? "done" : task.status === "In progress" ? "progress" : ""}">${task.name}</li>
     `).join("");
