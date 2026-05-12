@@ -15,7 +15,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("project", function (projectId) {
     const { ctx: { environments } } = this;
     const { projects } = environments['projects.11tydata'];
-    console.log({ project: projects.find(p => p.id === projectId), projectId });
+    const project = projects.find(p => p.id === projectId);
+    const percentComplete = (project.completedTasks / project.totalTasks) * 100;
+    console.log({ project, projectId, percentComplete });
+
+
+    return `
+    <section class="project-pane">
+      <div class="progress-bar-background"></div>
+      <div class="progress-bar" style="width: calc(${percentComplete}% + 2rem);"></div>
+      <ul>
+        <li>Need to fetch tasks</li>
+      </ul>
+    </section>
+    `
   });
 
   eleventyConfig.addPlugin(feedPlugin, {
