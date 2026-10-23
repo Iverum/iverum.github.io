@@ -5,6 +5,7 @@ const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles/");
   eleventyConfig.addPassthroughCopy("media/");
+  eleventyConfig.addPassthroughCopy("toys/advise/*.js");
 
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));
 
