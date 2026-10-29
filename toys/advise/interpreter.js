@@ -50,8 +50,8 @@
             return this.isAtEnd() ? "\0" : this.source.charAt(this.current);
         }
 
-        string() {
-            while (this.peek() != '"' && !this.isAtEnd()) {
+        peekFor(terminator) {
+            while(this.peek() != terminator && !this.isAtEnd()) {
                 if (this.peek() == '\n') this.line++;
                 this.advance();
             }
@@ -61,27 +61,18 @@
                 return;
             }
 
-            // The closing ".
             this.advance();
+        }
+
+        string() {
+            this.peekFor('"');
             // Trim the surrounding quotes.
             const value = this.source.substring(this.start + 1, this.current - 1);
             this.addToken(TokenType.STRING, value);
         }
 
         statement() {
-            while (this.peek() != '.' && !this.isAtEnd()) {
-                if (this.peek() == '\n') this.line++;
-                this.advance();
-            }
-
-            if (this.isAtEnd()) {
-                throw new ScannerError("Unterminated statement.", this.line);
-                return;
-            }
-
-            // The closing period.
-            this.advance();
-            // Trim the surrounding quotes.
+            this.peekFor('.');
             const value = this.source.substring(this.start, this.current);
             this.addToken(TokenType.STATEMENT, value);
         }
