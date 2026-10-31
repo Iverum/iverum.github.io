@@ -7,6 +7,10 @@
         return pattern.exec(text)[1];
     }
 
+    function error(line, message) {
+        console.error(`[line ${line}] Error [where]: ${message}`);
+    };
+
     const TokenType = Object.freeze({
         STRING: Symbol("string"),
         STATEMENT: Symbol("statement"),
@@ -129,9 +133,26 @@
         }
     };
 
-    function error(line, message) {
-        console.error(`[line ${line}] Error [where]: ${message}`);
-    };
+    class Room {
+        constructor(name, description) {
+            this.name = name;
+            this.description = description;
+            this.items = []
+        }
+
+        toString() {
+            let description = this.description;
+            this.items.forEach(item => {
+                description = `${description} ${item.description}`
+            });
+
+            return description;
+        }
+
+        addItem(item) {
+            this.items.push(item);
+        }
+    }
 
     function parse(tokens = []) {
         const board = { title: "", rooms: {} }; // todo: better name?
@@ -166,7 +187,7 @@
                 }
 
                 if (ROOM_PATTERN.test(previousToken)) {
-                   previousRoom = previousToken;
+                    previousRoom = previousToken;
                 }
             }
 
@@ -187,8 +208,11 @@
         function parseRoom(token) {
             const name = getName(token.literal, ROOM_PATTERN);
             let description = getDescription(token);
-            const room = { name, description };
+            const room = new Room(name, description);
             board.rooms[room.name] = room;
+            if (board.initialRoom === undefined) {
+                board.initialRoom = room;
+            }
         }
 
         function parseItem(token) {
@@ -201,8 +225,7 @@
             const roomName = getName(roomToken.literal, ROOM_PATTERN);
             const room = board.rooms[roomName];
             const description = getDescription(token);
-            const item = { name, description };
-            room.items ? room.items.push(item) : room.items = [item];
+            room.addItem({ name, description });
         }
 
         function parseToken() {
@@ -260,7 +283,7 @@
         }
 
         const board = parse(tokens);
-        console.log({ board, tokens });
+        // console.log({ board, tokens });
         return board;
     };
 

@@ -22,10 +22,15 @@ const BASE_CASE = `
         return command;
     }
 
-    function write(text) {
-        const pElement = document.createElement("p");
+    function write(text, element = "p") {
+        const pElement = document.createElement(element);
         pElement.textContent = text;
         logSection.appendChild(pElement);
+    }
+
+    function run(board) {
+        write(board.title, "h1");
+        write(board.initialRoom.toString());
     }
 
     function init() {
@@ -36,7 +41,7 @@ const BASE_CASE = `
         logSection = document.getElementById("log");
 
         const advise = document.Advise;
-        advise.interpret(BASE_CASE);
+        run(advise.interpret(BASE_CASE));
 
         // Add our submit event listener
         adviseForm.addEventListener("submit", (ev) => {
